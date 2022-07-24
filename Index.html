@@ -9,6 +9,30 @@
     
 
     <style>
+        html{
+            margin: 0 auto;
+            padding: 0 auto;
+        }
+        body{
+            min-height: 100%;
+            max-width: 100%;
+            background-color: papayawhip; 
+            margin: 0 auto;
+        }
+
+
+
+        [class*="con"]{
+            
+            background-color: #8230ec;
+            border: 0px solid #fff;
+            color: #fff;
+            text-align: center;
+            height: 100%;
+        
+            
+        }
+
         [class*="col"]{
             padding: 1rem;
             background-color: #33b5e5;
@@ -16,33 +40,31 @@
             color: #fff;
             text-align: left;
             margin: 0 auto;
-            justify-content: center;
+            /*justify-content: center;*/
+            min-height: 100%;
+            position: relative;
             
         }
+
         .btn-group{
             min-height: 75px;
-            margin-bottom: 5px;
-            
+            margin-bottom: 20px;
+            width: 100%;       
         }
+
+
 
         .form-control{
-            width: 50%;
+            width: 100%;
             
         }
 
-
-
-        /*
-        [class*="con"]{
-            padding: 1rem;
-            background-color: #8230ec;
-            border: 1px solid #fff;
-            color: #fff;
-            text-align: center;
-            min-height: 100%;
-            
+        #ButtonSubmit{
+            width: 100%;
         }
-        */
+        
+
+        
         
 
         
@@ -54,33 +76,55 @@
 </head>
 <body>
 
-    <div class="container-fluid"  style = "height: 100%;">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-md-12"><h1>BMI Calculator</h1></div>
         </div>
         <div class="row">
-            <div class="col-md-12">
-
-                <div class="btn-group">
-                    <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked />
-                    <label class="btn btn-primary" for="option1">Male</label>
-                  
-                    <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off" />
-                    <label class="btn btn-primary" for="option2">Female</label>
-                  
-                  </div>
 
 
-                  <div class="form-outline">
-                    <input type="text" id="Weight" class="form-control form-control-sm" />
-                    <label class="form-label" for="Weight">Weight</label>
 
-                    <input type="text" id="Height" class="form-control form-control-sm" />
-                    <label class="form-label" for="Height">Height</label>
-                  </div>
 
+            <div class="col-md-6 d-flex justify-content-center align-items-center">
+                <div class="wrapper">
+                    
+                    <div class="btn-group">
+                        <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked />
+                        <label class="btn btn-primary" for="option1">Male</label>
+                      
+                        <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off" />
+                        <label class="btn btn-primary" for="option2">Female</label>
+                      
+                      </div>
+    
+    
+                      <div class="form-outline">
+                        <input type="text" id="Weight" class="form-control form-control-sm" />
+                        <label class="form-label" for="Weight">Weight in kg</label>
+    
+                        <input type="text" id="Height" class="form-control form-control-sm" />
+                        <label class="form-label" for="Height">Height in Meters</label>
+                      </div>
+    
+                      <button type="button" class="btn btn-outline-primary btn-lg" id="ButtonSubmit">Submit</button>
+
+                </div>
 
             </div>
+
+            <div class="col-md-6 d-flex justify-content-center align-items-center">
+
+                
+                <h2 class="display-4" id="bmiLabel">Your Body Mass Index is</h2>
+               
+                <br>
+                
+                <h2 class="display-5" id="bmisublabel">This is considered</h2>
+                
+                
+
+            </div>
+
             
         </div>
         <div class="row">
@@ -90,7 +134,7 @@
 
     </div>
 
-    
+    <script src="index.js"></script>
     <script src="js/bootstrap.js"></script>
 </body>
 </html>
