@@ -9,12 +9,20 @@
     
 
     <style>
-        html{
+        *{  
+            
             margin: 0 auto;
             padding: 0 auto;
         }
+
+        html{
+            margin: 0 auto;
+            padding: 0 auto;
+            height: 100%
+            
+        }
         body{
-            min-height: 100%;
+            height: 100%;
             max-width: 100%;
             background-color: papayawhip; 
             margin: 0 auto;
@@ -26,7 +34,7 @@
             
             background-color: #8230ec;
             border: 0px solid #fff;
-            color: #fff;
+            color: rgb(12, 12, 12);
             text-align: center;
             height: 100%;
         
@@ -35,9 +43,9 @@
 
         [class*="col"]{
             padding: 1rem;
-            background-color: #33b5e5;
+            background-color: #00b7fa;
             border: 1px solid #fff;
-            color: #fff;
+            color: darkslategray;
             text-align: left;
             margin: 0 auto;
             /*justify-content: center;*/
@@ -46,26 +54,37 @@
             
         }
 
+
+
         .btn-group{
             min-height: 75px;
             margin-bottom: 20px;
-            width: 100%;       
+            min-width: 275px;       
         }
 
 
 
         .form-control{
-            width: 100%;
+            min-width: 100%;
             
         }
 
         #ButtonSubmit{
-            width: 100%;
+            min-width: 100%;
         }
+    
         
+        
+        img {
+            max-width: 33%;
+            height: auto;
+            float: right;
+        }
 
-        
-        
+        h2{
+            
+            color: #32325d;
+        }
 
         
     </style>
@@ -78,7 +97,9 @@
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-12"><h1>BMI Calculator</h1></div>
+            <div class="col-md-12">
+                <h1>BMI Calculator</h1>
+            </div>
         </div>
         <div class="row">
 
@@ -99,27 +120,36 @@
     
     
                       <div class="form-outline">
-                        <input type="text" id="Weight" class="form-control form-control-sm" />
+                        <input type="number" step=".01" id="Weight" class="form-control form-control-sm" />
                         <label class="form-label" for="Weight">Weight in kg</label>
     
-                        <input type="text" id="Height" class="form-control form-control-sm" />
+                        <input type="number" step=".01" id="Height" class="form-control form-control-sm" />
                         <label class="form-label" for="Height">Height in Meters</label>
                       </div>
     
                       <button type="button" class="btn btn-outline-primary btn-lg" id="ButtonSubmit">Submit</button>
 
+                    </br>
+
                 </div>
 
             </div>
 
-            <div class="col-md-6 d-flex justify-content-center align-items-center">
+            <div class="col-md-6">
 
                 
-                <h2 class="display-4" id="bmiLabel">Your Body Mass Index is</h2>
+                <h2 class="display-4" id="bmiLabel"> BMI weight ranges</h2>
                
-                <br>
+            </br>
                 
-                <h2 class="display-5" id="bmisublabel">This is considered</h2>
+                <h2 class="display-8" id="bmisublabel">
+                    <li>Less than 18.5 = Underweight</li>
+                    <li>Between 18.5 - 24.9 = Healthy Weight</li>
+                    <li>Between 25 - 29.9 = Overweight</li>
+                    <li> Over 30 = Obese</li>
+                    
+                    
+                </h2>
                 
                 
 
@@ -127,6 +157,23 @@
 
             
         </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                
+                <p><img src="BMI Chart.jpg" class="rounded mx-auto d-block" alt="...">
+                    <h2>Is Body Mass Index reliable?</h2>
+                    Your BMI, or Body Mass Index, is a measure of your weight compared to your height. Accurate assessments of obesity are important, as being overweight or obese significantly increases your risk of a variety of medical conditions including type 2 diabetes, heart disease and cancer. 
+                    As levels of overweight or obesity increase, the spotlight has fallen on BMI and its shortcomings as a measure of ideal weight for individuals, rather than whole populations of people where 'averages' apply.
+                   <br> 
+                   <br> 
+                    The calculator will give you an idea of how your weight compares to common values. 
+                    Body Mass Index (or BMI) is calculated as your weight (in kilograms) divided by the square of your height (in metres) or BMI = Kg/M2.
+                </p>
+            </div>
+        </div>
+
+
         <div class="row">
             <div class="col-md-12">Footer</div>
         </div>

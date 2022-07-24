@@ -14,21 +14,24 @@ document.getElementById("ButtonSubmit").onclick = function(){
 
     if (result < 18) {
         bmisublabel.innerHTML = ("This is considered Underweight");
+        bmisublabel.style.color = "#fdc310";
+        
     }
 
     else if(result < 24.9) {
-        bmisublabel.innerHTML = ("This is considered Normal weight");
-
+        bmisublabel.innerHTML = ("This is considered Normal Weight");
+        bmisublabel.style.color = "#13cac0";
     }
 
     else if(result < 29.9) {
         bmisublabel.innerHTML = ("This is considered Overweight");
-
+        bmisublabel.style.color = "#1289a8";
     }
 
+    
     else if(result > 30) {
         bmisublabel.innerHTML = ("This is considered Obesity");
-
+        bmisublabel.style.color = "#ed4d63";
     }
 
     
